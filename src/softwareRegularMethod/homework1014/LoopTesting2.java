@@ -11,14 +11,11 @@ import org.junit.Test;
 public class LoopTesting2 {
 
 	private void checkFunction(ArrayList<String> strList) {
-		for(String str:strList) {
-			if(str.equals("0")) {
-				System.out.println("Y");
-			}
-			else {
+		for(String str:strList)
+			if(str.equals("0"))
+				System.out.println("Y");		
+			else 
 				System.out.println("N");
-			}
-		}
 	}
 	
 	@Test
