@@ -1,4 +1,4 @@
-package homework1014;
+package softwareRegularMethod.homework1014;
 
 import java.util.ArrayList;
 import org.junit.Test;
