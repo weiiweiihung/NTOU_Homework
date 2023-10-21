@@ -2,11 +2,10 @@ package softwareRegularMethod.homework1014;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class LoopTesting4Test {
+public class LoopTesting4Test {
 
 	@Test
 	public void test1() {
