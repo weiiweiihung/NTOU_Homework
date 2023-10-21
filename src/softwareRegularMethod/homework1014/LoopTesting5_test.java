@@ -9,24 +9,24 @@ public class LoopTesting5_test {
 	@Test
 	public void test1() {
 		ArrayList<String>strList1 = new ArrayList<>();
-		System.out.println("¥¿¦C¬°ªÅ: "+LoopTesting5_phone.checkPhone(strList1));
+		System.out.println("æ­£åˆ—ç‚ºç©º: "+LoopTesting5_phone.checkPhone(strList1));
 	}
 	@Test
 	public void test2() {
 		ArrayList<String>strList = new ArrayList<>();
 		strList.add("1123");
-		System.out.println("¤â¾÷¸¹½X: "+LoopTesting5_phone.checkPhone(strList));
+		System.out.println("æ‰‹æ©Ÿè™Ÿç¢¼: "+LoopTesting5_phone.checkPhone(strList));
 	}
 	@Test
 	public void test3() {
 		ArrayList<String>strList = new ArrayList<>();
 		strList.add("@@!!@@!!@@");
-		System.out.println("¤â¾÷¸¹½X: "+LoopTesting5_phone.checkPhone(strList));
+		System.out.println("æ‰‹æ©Ÿè™Ÿç¢¼: "+LoopTesting5_phone.checkPhone(strList));
 	}
 	@Test
 	public void test4() {
 		ArrayList<String>strList = new ArrayList<>();
 		strList.add("0912345678");
-		System.out.println("¤â¾÷¸¹½X: "+LoopTesting5_phone.checkPhone(strList));
+		System.out.println("æ‰‹æ©Ÿè™Ÿç¢¼: "+LoopTesting5_phone.checkPhone(strList));
 	}
 }

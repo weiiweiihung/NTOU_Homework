@@ -6,9 +6,9 @@ package softwareRegularMethod.homework1014;
  *
  */
 public enum LoopTesting5_Common {
-	  OK("¥¿½T")
-	, ERR_LENGTH("ªø«×¿ù»~")
-    , ERR_FORMAT ("®æ¦¡¿ù»~")
+	  OK("æ­£ç¢º")
+	, ERR_LENGTH("é•·åº¦éŒ¯èª¤")
+    , ERR_FORMAT ("æ ¼å¼éŒ¯èª¤")
     ;
     private final String content;
     
