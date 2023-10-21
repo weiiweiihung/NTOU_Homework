@@ -1,7 +1,7 @@
 package softwareRegularMethod.homework1014;
 
 /**
- * 錯誤代碼與中文
+ * message
  * @author Jenny
  *
  */

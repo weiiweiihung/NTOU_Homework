@@ -3,7 +3,7 @@ package softwareRegularMethod.homework1014;
 import java.util.ArrayList;
 
 /**
- * 手機號碼驗證
+ * check phone number
  * @author Jenny
  *	
  */
