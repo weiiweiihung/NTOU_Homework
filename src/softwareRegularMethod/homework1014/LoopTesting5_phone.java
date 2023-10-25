@@ -1,30 +1,27 @@
 package softwareRegularMethod.homework1014;
 
-import java.util.ArrayList;
-
 /**
  * check phone number
  * @author Jenny
  *	
  */
 public class LoopTesting5_phone {
-	public String checkPhone(ArrayList<String> strList){
-		if (strList == null || strList.size() <= 0)
-			return LoopTesting5_Common.ERR_NULL_OR_EMPTY.getContent();
-		
-		String msg = "";
-		
-		for(String str:strList){
-			if (str == null)
-				msg = LoopTesting5_Common.ERR_NULL_OR_EMPTY.getContent();
-			else if(str.length() != 10)
-				msg = LoopTesting5_Common.ERR_LENGTH.getContent();
+	public String checkPhone(String[] strArrPhoneNumber){
+		if (strArrPhoneNumber == null || (strArrPhoneNumber.length == 1 && "".equals(strArrPhoneNumber[0])))
+			return LoopTesting5_Common.ERR_NULL.getContent();
+		if (strArrPhoneNumber.length != 10) 
+			return LoopTesting5_Common.ERR_LENGTH.getContent();
+		if (!"0".equals(strArrPhoneNumber[0]) && !"9".equals(strArrPhoneNumber[1])) {
+			return LoopTesting5_Common.ERR_FORMAT.getContent();
+		}
+				
+		for(String str:strArrPhoneNumber){
+			if (" ".equals(str))
+				return LoopTesting5_Common.ERR_EMPTY.getContent();
 			else if(!str.matches("^[0-9]*$"))
-				msg = LoopTesting5_Common.ERR_FORMAT.getContent();
-			else 
-				msg = LoopTesting5_Common.OK.getContent();
+				return LoopTesting5_Common.ERR_FORMAT.getContent();
 		}
 		
-		return msg;
+		return LoopTesting5_Common.OK.getContent();
 	}
 }
