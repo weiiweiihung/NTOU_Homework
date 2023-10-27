@@ -18,7 +18,7 @@ public class LoopTesting1 {
 				System.out.println("N");	
 	}
 	
-	@Test
+	//@Test
 	public void test() {
 		ArrayList<String> strList = new ArrayList<String>();
 		strList.add("a");

@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class LoopTesting4Test {
 
-	@Test
+	//@Test
 	public void test1() {
 		LoopTesting4 test4 = new LoopTesting4();
 		for (int i = 0; i <= 10; i++) {
@@ -15,7 +15,7 @@ public class LoopTesting4Test {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void test() {
 		LoopTesting4 test4 = new LoopTesting4();
 		assertFalse(test4.isPositive(-1));

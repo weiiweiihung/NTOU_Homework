@@ -45,5 +45,21 @@ public class LoopTesting6_test {
 		String msg = new LoopTesting6_phone().checkPhone(strArrPhoneNumber);
 		System.out.println(msg);
 		assertEquals(LoopTesting6_Common.ERR_FORMAT.getContent(), msg);
+	}	
+	@Test
+	public void test6() {
+		String strPhoneNumber = "1912345678";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new LoopTesting6_phone().checkPhone(strArrPhoneNumber);
+		System.out.println(msg);
+		assertEquals(LoopTesting6_Common.ERR_FORMAT.getContent(), msg);
+	}
+	@Test
+	public void test7() {
+		String strPhoneNumber = "0112345678";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new LoopTesting6_phone().checkPhone(strArrPhoneNumber);
+		System.out.println(msg);
+		assertEquals(LoopTesting6_Common.ERR_FORMAT.getContent(), msg);
 	}
 }

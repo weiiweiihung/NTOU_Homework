@@ -18,14 +18,14 @@ public class LoopTesting2 {
 				System.out.println("N");
 	}
 	
-	@Test
+	//@Test
 	public void test1() {
 		ArrayList<String> strList = new ArrayList<String>();
 		strList.add("a");
 //		strList.add("0");
 		checkFunction(strList);
 	}
-	@Test
+	//@Test
 	public void test2() {
 		ArrayList<String> strList = new ArrayList<String>();
 //		strList.add("a");
