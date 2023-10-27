@@ -42,7 +42,6 @@ public class LoopTesting5_test {
 		String strPhoneNumber = "          ";
 		strPhoneNumber = strPhoneNumber.trim();
 		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-		System.out.println(strArrPhoneNumber.length);
 		String msg = new LoopTesting5_phone().checkPhone(strArrPhoneNumber);
 		System.out.println(msg);
 		assertEquals(LoopTesting5_Common.ERR_NULL.getContent(), msg);
