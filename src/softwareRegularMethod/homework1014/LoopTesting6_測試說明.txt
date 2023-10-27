@@ -33,6 +33,20 @@ test case 5 (測試案例 5)
 4) criteria analysis(測試目標的分析) 
 Line coverage:    測試案例涵蓋的lines: 1 2 4 6 7
 
+test case 6 (測試案例 6)
+1) Input values(測試時候需要控制資料的值): strArrPhoneNumber 1912345678
+2) expected result(正確的結果): 格式錯誤
+3) test program's result(程式執行後的結果): 格式錯誤
+4) criteria analysis(測試目標的分析) 
+Line coverage:    測試案例涵蓋的lines: 1 2 4 6 7
+
+test case 7 (測試案例 7)
+1) Input values(測試時候需要控制資料的值): strArrPhoneNumber 0112345678
+2) expected result(正確的結果): 格式錯誤
+3) test program's result(程式執行後的結果): 格式錯誤
+4) criteria analysis(測試目標的分析) 
+Line coverage:    測試案例涵蓋的lines: 1 2 4 6 7
+
 綜合 test case 1 到 test case 7: 
 涵蓋的行: 1 2 3 4 5 6 7 8 9 10 11
 涵蓋率: 100%
