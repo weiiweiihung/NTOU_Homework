@@ -23,3 +23,4 @@ public class LoopTesting6_phone {
 		return LoopTesting6_Common.OK.getContent();								//11
 	}
 }
+
