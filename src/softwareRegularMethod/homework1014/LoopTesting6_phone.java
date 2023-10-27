@@ -16,12 +16,10 @@ public class LoopTesting5_phone {
 		}
 				
 		for(String str:strArrPhoneNumber){									//8
-			if (" ".equals(str))										//9
-				return LoopTesting5_Common.ERR_EMPTY.getContent();					//10
-			else if(!str.matches("^[0-9]*$"))								//11
-				return LoopTesting5_Common.ERR_FORMAT.getContent();					//12
+			if(!str.matches("^[0-9]*$"))									//9
+				return LoopTesting5_Common.ERR_FORMAT.getContent();					//10
 		}
 		
-		return LoopTesting5_Common.OK.getContent();								//13
+		return LoopTesting5_Common.OK.getContent();								//11
 	}
 }
