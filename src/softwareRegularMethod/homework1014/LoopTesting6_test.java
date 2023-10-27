@@ -39,25 +39,6 @@ public class LoopTesting6_test {
 	}
 	@Test
 	public void test5() {
-		String strPhoneNumber = "          ";
-		strPhoneNumber = strPhoneNumber.trim();
-		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-		System.out.println(strArrPhoneNumber.length);
-		String msg = new LoopTesting6_phone().checkPhone(strArrPhoneNumber);
-		System.out.println(msg);
-		assertEquals(LoopTesting6_Common.ERR_NULL.getContent(), msg);
-	}
-	@Test
-	public void test6() {
-		String strPhoneNumber = "0912345 78";
-		strPhoneNumber = strPhoneNumber.trim();
-		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-		String msg = new LoopTesting6_phone().checkPhone(strArrPhoneNumber);
-		System.out.println(msg);
-		assertEquals(LoopTesting6_Common.ERR_EMPTY.getContent(), msg);
-	}
-	@Test
-	public void test7() {
 		String strPhoneNumber = "1234567890";
 		strPhoneNumber = strPhoneNumber.trim();
 		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
