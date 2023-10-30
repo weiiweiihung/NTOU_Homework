@@ -19,10 +19,9 @@ public class LoopTesting6_phone {
 			if(index==1)                                                // 10
 				if(!str.matches("[9]")) 								// 11
 					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 12
-			if(index>=2) {                                              // 13
+			if(index>=2)                                              	// 13
 				if(!str.matches("^[0-9]*$")) 							// 14
-					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 15
-			}                                                              
+					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 15			                                                            
 			index++;                                                    // 16
 		}                                                                  
 		return LoopTesting6_Common.OK.getContent();						// 17
