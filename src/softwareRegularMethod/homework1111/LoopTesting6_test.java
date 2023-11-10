@@ -1,7 +1,10 @@
-package softwareRegularMethod.homework1014;
+package softwareRegularMethod.homework1111;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import softwareRegularMethod.homework1014.LoopTesting6_Common;
+import softwareRegularMethod.homework1014.LoopTesting6_phone;
 
 public class LoopTesting6_test {
 	String message = "";
