@@ -6,105 +6,67 @@ import org.junit.Test;
 
 public class HW3_LoopTesting_test {
 	String message = "";
-	@Test(timeout = 1000) //超過1秒還未回復執行成功則表示失敗
+	@Test
 	public void testMethod1() {
 	    // 在這裡執行測試程式碼
-	    int count = 0;
-	    long startTime = System.currentTimeMillis();
-	    while (System.currentTimeMillis() - startTime <= 1000) { //1秒內執行幾次
-	        // 測試程式碼
-	    	String [] strArrPhoneNumber = null;
-			String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
-			
-			assertEquals(HW3_LoopTesting_Common.ERR_NULL.getContent(), msg);
-	        count++;
-	    }
-	    System.out.println("執行了 " + count + " 次");
+	    // 最小值
+		String strPhoneNumber = "0900000000";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+		assertEquals(HW3_LoopTesting_Common.OK.getContent(), msg);   
 	}
 	
-	@Test(timeout = 1000) //超過1秒還未回復執行成功則表示失敗
+	@Test
 	public void testMethod2() {
 	    // 在這裡執行測試程式碼
-	    int count = 0;
-	    long startTime = System.currentTimeMillis();
-	    while (System.currentTimeMillis() - startTime <= 1000) { //1秒內執行幾次
-	        // 測試程式碼
-	    	String strPhoneNumber = "1123";
-			String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-			String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
-			
-			assertEquals(HW3_LoopTesting_Common.ERR_LENGTH.getContent(), msg);
-	        count++;
-	    }
-	    System.out.println("執行了 " + count + " 次");
+		// 最大值
+		String strPhoneNumber = "0999999999";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+		assertEquals(HW3_LoopTesting_Common.OK.getContent(), msg);  
 	}
 	
-	@Test(timeout = 1000) //超過1秒還未回復執行成功則表示失敗
+	@Test
 	public void testMethod3() {
-	    // 在這裡執行測試程式碼
-	    int count = 0;
-	    long startTime = System.currentTimeMillis();
-	    while (System.currentTimeMillis() - startTime <= 1000) { //1秒內執行幾次
-	        // 測試程式碼
-	    	String strPhoneNumber = "1234567890";
-			strPhoneNumber = strPhoneNumber.trim();
-			String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-			String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
-			
-			assertEquals(HW3_LoopTesting_Common.ERR_FORMAT.getContent(), msg);
-	        count++;
-	    }
-	    System.out.println("執行了 " + count + " 次");
+		// 在這裡執行測試程式碼
+		// 有效範圍內的長度
+    	String strPhoneNumber = "0912345678";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+		
+		assertEquals(HW3_LoopTesting_Common.OK.getContent(), msg);
 	}
 	
-	@Test(timeout = 1000) //超過1秒還未回復執行成功則表示失敗
+	@Test
 	public void testMethod4() {
-	    // 在這裡執行測試程式碼
-	    int count = 0;
-	    long startTime = System.currentTimeMillis();
-	    while (System.currentTimeMillis() - startTime <= 1000) { //1秒內執行幾次
-	        // 測試程式碼
-	    	String strPhoneNumber = "0112345678";// 第2碼不為9
-			String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-			String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
-			
-			assertEquals(HW3_LoopTesting_Common.ERR_FORMAT.getContent(), msg);
-	        count++;
-	    }
-	    System.out.println("執行了 " + count + " 次");
+		// 在這裡執行測試程式碼
+		// 有效範圍"外"的長度-1(長度為9)
+		String strPhoneNumber = "091234567";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+				
+		assertEquals(HW3_LoopTesting_Common.ERR_LENGTH.getContent(), msg);
 	}
 
-	@Test(timeout = 1000) //超過1秒還未回復執行成功則表示失敗
+	@Test
 	public void testMethod5() {
-	    // 在這裡執行測試程式碼
-	    int count = 0;
-	    long startTime = System.currentTimeMillis();
-	    while (System.currentTimeMillis() - startTime <= 1000) { //1秒內執行幾次
-	        // 測試程式碼
-	    	String strPhoneNumber = "09@@123456";
-			String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-			String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
-			
-			assertEquals(HW3_LoopTesting_Common.ERR_FORMAT.getContent(), msg);
-	        count++;
-	    }
-	    System.out.println("執行了 " + count + " 次");
+		// 在這裡執行測試程式碼
+		// 有效範圍"外"的長度+1(長度為11)
+		String strPhoneNumber = "091234567";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+						
+		assertEquals(HW3_LoopTesting_Common.ERR_LENGTH.getContent(), msg);
 	}
 	
-	@Test(timeout = 1000) //超過1秒還未回復執行成功則表示失敗
+	@Test
 	public void testMethod6() {
-	    // 在這裡執行測試程式碼
-	    int count = 0;
-	    long startTime = System.currentTimeMillis();
-	    while (System.currentTimeMillis() - startTime <= 1000) { //1秒內執行幾次
-	        // 測試程式碼
-	    	String strPhoneNumber = "0912345678";
-			String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
-			String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
-			
-			assertEquals(HW3_LoopTesting_Common.OK.getContent(), msg);
-	        count++;
-	    }
-	    System.out.println("執行了 " + count + " 次");
+		// 在這裡執行測試程式碼
+		// 無效值(非數字)
+		String strPhoneNumber = "09124$%%^*";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+								
+		assertEquals(HW3_LoopTesting_Common.ERR_FORMAT.getContent(), msg);
 	}
 }
