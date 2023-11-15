@@ -6,24 +6,24 @@ package softwareRegularMethod.homework1014;
  *	                                                                        
  */                                                                         
 public class LoopTesting6_phone {                                           
-	public String checkPhone(String[] strArrPhoneNumber){					 
-		if (strArrPhoneNumber == null)                                  // 1
-			return LoopTesting6_Common.ERR_NULL.getContent();			// 2
-		if (strArrPhoneNumber.length != 10) 							// 3
-			return LoopTesting6_Common.ERR_LENGTH.getContent();			// 4
-		int index = 0;		                                            // 5 
-		for(String str:strArrPhoneNumber){                              // 6 
-			if(index==0)                                                // 7 
-				if(!str.matches("[0]")) 								// 8 
-					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 9
-			if(index==1)                                                // 10
-				if(!str.matches("[9]")) 								// 11
-					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 12
-			if(index>=2)                                              	// 13
-				if(!str.matches("^[0-9]*$")) 							// 14
-					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 15			                                                            
-			index++;                                                    // 16
-		}                                                                  
-		return LoopTesting6_Common.OK.getContent();						// 17
+	public String checkPhone(String[] strArrPhoneNumber){				// 1	 
+		if (strArrPhoneNumber == null)                                  // 2
+			return LoopTesting6_Common.ERR_NULL.getContent();			// 3 
+		if (strArrPhoneNumber.length != 10) 							// 4 
+			return LoopTesting6_Common.ERR_LENGTH.getContent();			// 5 
+		int index = 0;		                                            // 6 
+		for(String str:strArrPhoneNumber){                              // 7 
+			if(index==0)                                                // 8 
+				if(!str.matches("[0]")) 								// 9 
+					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 10
+			if(index==1)                                                // 11
+				if(!str.matches("[9]")) 								// 12
+					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 13
+			if(index>=2)                                              	// 14
+				if(!str.matches("^[0-9]*$")) 							// 15
+					return LoopTesting6_Common.ERR_FORMAT.getContent();	// 16		                                                            
+			index++;                                                    // 17
+		}                                                                 
+		return LoopTesting6_Common.OK.getContent();						// 18
 	}                                                                    
 }                                                                           
