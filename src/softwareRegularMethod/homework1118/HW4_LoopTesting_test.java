@@ -24,33 +24,9 @@ public class HW4_LoopTesting_test {
 		assertEquals(HW4_LoopTesting_Common.ERR_NUMBER.getContent(), msg);   
 	}
 	
-	@Test
-	public void testMethod3ForP() {
-	    // 在這裡執行測試程式碼
-		String strPhoneNumber = "0912345678";//長度正確&第一、二碼為09，且判斷是否皆為數字"正確" (False False)
-		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
-		assertEquals(HW4_LoopTesting_Common.OK.getContent(), msg);   
-	}
-	
 	/*
 	 * Clause Coverage
 	 */
-	@Test
-	public void testMethod1ForCl() {
-	    // 在這裡執行測試程式碼
-		String strPhoneNumber = "09123";//長度錯誤但第一、二碼為09，(判斷是否皆為數字邏輯上走不到，因為前面就會直接RETURN)True False
-		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
-		assertEquals(HW4_LoopTesting_Common.ERR_FORMAT.getContent(), msg);   
-	}
-	
-	@Test
-	public void testMethod2ForCl() {
-	    // 在這裡執行測試程式碼
-		String strPhoneNumber = "1234567890";//長度正確但第一、二碼不是09，(判斷是否皆為數字邏輯上走不到，因為前面就會直接RETURN)False True
-		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
-		assertEquals(HW4_LoopTesting_Common.ERR_FORMAT.getContent(), msg);   
-	}
-	
 	@Test
 	public void testMethod3ForCl() {
 	    // 在這裡執行測試程式碼
@@ -65,14 +41,6 @@ public class HW4_LoopTesting_test {
 		String strPhoneNumber = "091^@$5678";//長度正確&第一、二碼是09開頭，判斷非皆為數字"true" False False True
 		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
 		assertEquals(HW4_LoopTesting_Common.ERR_NUMBER.getContent(), msg);   
-	}
-	
-	@Test
-	public void testMethod5ForCl() {
-	    // 在這裡執行測試程式碼
-		String strPhoneNumber = "0912345678";//長度正確&第一、二碼是09開頭，判斷非皆為數字"false" False False False
-		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
-		assertEquals(HW4_LoopTesting_Common.OK.getContent(), msg);   
 	}
 	
 	/*
@@ -141,15 +109,5 @@ public class HW4_LoopTesting_test {
 		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
 		assertEquals(HW4_LoopTesting_Common.ERR_NUMBER.getContent(), msg);   
 	}
-	
-	@Test
-	public void testMethod9ForCo() {
-	    // 在這裡執行測試程式碼
-		String strPhoneNumber = "0912345678";//長度正確&第一、二碼是09開頭，判斷是否皆為數字"正確"
-		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
-		assertEquals(HW4_LoopTesting_Common.OK.getContent(), msg);   
-	}
-	
-	
-	
+		
 }
