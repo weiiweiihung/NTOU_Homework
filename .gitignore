@@ -33,3 +33,7 @@ replay_pid*
 # for java EE
 /build/
 /WebContent/META-INF/
+
+# for intellij
+.idea/
+NTOU_Homework.iml
