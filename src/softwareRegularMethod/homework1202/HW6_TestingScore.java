@@ -3,13 +3,13 @@ package softwareRegularMethod.homework1202;
 public class HW6_TestingScore {
 	public String getAvgScore(int[] scoreArr, String exam) {
 		int total = 0;
-		for (int score : scoreArr) {
-			if (score > 100) {
+		for (int i=0;i<scoreArr.length;i++) {
+			if (scoreArr[i] > 100) {
 				return "分數不得大於100";
-			} else if (score <= 0) {//應為<0
+			} else if (scoreArr[i] < 0) {
 				return "分數不得小於0";
 			}
-			total += score;
+			total += scoreArr[i];
 		}
 
 		double weighted;

@@ -49,4 +49,10 @@ public class HW6_TestingScoreTest {
 		assertEquals("0", result);
 		System.out.println("HW6_test7 response: " + result);
 	}
+	@Test
+	public void test8() {//變異測試
+		String result = new HW6_TestingScore().getAvgScore(new int[] { 60, 70, 80 }, "期末考");
+		assertEquals("49.0", result);
+		System.out.println("HW6_test7 response: " + result);
+	}
 }
