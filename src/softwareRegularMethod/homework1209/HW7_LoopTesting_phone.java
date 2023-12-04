@@ -15,7 +15,7 @@ public class HW7_LoopTesting_phone {
 	     if (strPhoneNumber.charAt(0) != '0'){
 	    	return HW4_LoopTesting_Common.ERR_FORMAT.getContent(); //第一碼不是0
 	     }
-	     if (strPhoneNumber.charAt(1) == '9'){
+	     if (strPhoneNumber.charAt(1) != '9'){
 		    	return HW4_LoopTesting_Common.ERR_FORMAT.getContent(); //第二碼不是9
 		 }
 	     
