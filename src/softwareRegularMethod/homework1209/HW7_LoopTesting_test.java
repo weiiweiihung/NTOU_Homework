@@ -45,5 +45,10 @@ public class HW7_LoopTesting_test {
 		assertEquals(HW4_LoopTesting_Common.ERR_NUMBER.getContent(), msg);   
 	}
 	
-		
+	@Test
+	public void testMetho65ForP() {
+		String strPhoneNumber = "09123456789";//長度大於10
+		String msg = new HW7_LoopTesting_phone().checkPhone(strPhoneNumber);
+		assertEquals(HW4_LoopTesting_Common.ERR_FORMAT.getContent(), msg);   
+	}
 }

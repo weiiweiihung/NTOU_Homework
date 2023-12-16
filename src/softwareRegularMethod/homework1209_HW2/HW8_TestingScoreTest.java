@@ -41,4 +41,17 @@ public class HW8_TestingScoreTest {
 		System.out.println("test1 response: " + result);
 	}
 	
+	@Test
+	public void test6() {
+		String result = new HW8_TestingScore().getAvgScore(new int[] { -1, 1 });
+		assertEquals("分數不得小於0", result);
+		System.out.println("test1 response: " + result);
+	}
+	
+	@Test
+	public void test7() {
+		String result = new HW8_TestingScore().getAvgScore(new int[] { 99, 101 });
+		assertEquals("分數不得大於100", result);
+		System.out.println("test1 response: " + result);
+	}
 }
