@@ -69,4 +69,29 @@ public class HW3_LoopTesting_test {
 								
 		assertEquals(HW3_LoopTesting_Common.ERR_FORMAT.getContent(), msg);
 	}
+	
+	@Test
+	public void testMethod7() {
+		String strPhoneNumber = "1912345678";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+								
+		assertEquals(HW3_LoopTesting_Common.ERR_FORMAT.getContent(), msg);
+	}
+	@Test
+	public void testMethod8() {
+		String strPhoneNumber = "0123456789";
+		String [] strArrPhoneNumber = strPhoneNumber.split("(?!^)");//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+								
+		assertEquals(HW3_LoopTesting_Common.ERR_FORMAT.getContent(), msg);
+	}
+	@Test
+	public void testMethod9() {
+//		String strPhoneNumber = null;
+		String [] strArrPhoneNumber = null;//轉array
+		String msg = new HW3_LoopTesting_phone().checkPhone(strArrPhoneNumber);
+								
+		assertEquals(HW3_LoopTesting_Common.ERR_NULL.getContent(), msg);
+	}
 }

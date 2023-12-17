@@ -98,4 +98,10 @@ public class HW4_LoopTesting_test {
 		assertEquals(HW4_LoopTesting_Common.ERR_NUMBER.getContent(), msg);   
 	}
 		
+	@Test
+	public void testMethod9ForCo() {
+	    String strPhoneNumber = "0912345678";//長度正確&第一、二碼是09開頭，判斷是否皆為數字"錯誤"
+		String msg = new HW4_LoopTesting_phone().checkPhone(strPhoneNumber);
+		assertEquals(HW4_LoopTesting_Common.OK.getContent(), msg);   
+	}
 }
