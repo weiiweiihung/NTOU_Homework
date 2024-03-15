@@ -1,0 +1,14 @@
+SWOT分析Kerberos	
+
+Strengths	集中式管理
+
+Weaknesses
+擷取信號取得多把鑰匙破解
+易受重播攻擊（Replay Attack）
+
+0ppotunities
+多重盤問與回應協定
+連線識別（類似TCP三向交握）
+加密
+
+Threats	惡意攻擊
