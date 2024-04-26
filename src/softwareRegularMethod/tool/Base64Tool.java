@@ -15,8 +15,8 @@ import java.util.Base64;
  */
 public class Base64Tool {
 	public static void main(String[] args) {
-		String base64Str = fileToBase64();// 產生file的string base64
-		writeIntoFile(base64Str);// 將string base64寫入.txt
+//		String base64Str = fileToBase64();// 產生file的string base64
+//		writeIntoFile(base64Str);// 將string base64寫入.txt
 		String readFile = readFileBase64Str();//讀取string base64 .txt
 		decodeFileString(readFile);//(base64Str);//將base64解為檔案
 	}
@@ -24,9 +24,9 @@ public class Base64Tool {
 	private static final String encryptPath = "D:\\base64Files\\1encrypt\\";
 	private static final String encryptPathFileName = "Junit.pptx";
 	private static final String writeBase64FileStr = "D:\\base64Files\\1encrypt\\decryptStr.txt";
-	private static final String readBase64FileStr = "D:\\base64Files\\2decrypt\\decryptStr.txt";
+	private static final String readBase64FileStr = "D:\\base64Files\\2decrypt\\123";
 	private static final String decryptPath = "D:\\base64Files\\2decrypt\\";
-	private static final String decryptfileName = "Junit1.pptx";
+	private static final String decryptfileName = "1";
 
 	/** 將檔案轉為base64，並return String base64 */
 	public static String fileToBase64() {
